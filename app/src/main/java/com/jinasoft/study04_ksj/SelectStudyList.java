@@ -7,8 +7,10 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jinasoft.study04_ksj.AlarmManager.AlarmMain;
 import com.jinasoft.study04_ksj.AsyncTask.AsyncTaskMain;
 import com.jinasoft.study04_ksj.DontStop.DontStopMain;
+import com.jinasoft.study04_ksj.Notification.NotificationMain;
 import com.jinasoft.study04_ksj.Service.ServiceMain;
 
 
@@ -22,8 +24,8 @@ public class SelectStudyList extends AppCompatActivity {
         Button btn1 = (Button) findViewById(R.id.Selcet_Step1BTN);
         Button btn2 = (Button) findViewById(R.id.Selcet_Step2BTN);
         Button btn3 = (Button) findViewById(R.id.Selcet_Step3BTN);
-//        Button btn4 = (Button) findViewById(R.id.Selcet_CursorBTN);
-//        Button btn5 = (Button) findViewById(R.id.Selcet_ThreadBTN);
+        Button btn4 = (Button) findViewById(R.id.Selcet_Step4BTN);
+        Button btn5 = (Button) findViewById(R.id.Selcet_Step5BTN);
 //        Button btn6 = (Button) findViewById(R.id.Selcet_CountBTN);
 //        Button btn7 = (Button) findViewById(R.id.Selcet_DataBaseBTN);
 //
@@ -42,16 +44,16 @@ public class SelectStudyList extends AppCompatActivity {
             Intent intent = new Intent(SelectStudyList.this, ServiceMain.class);
             startActivity(intent);
         });
-//        btn4.setOnClickListener(view -> {
-//            Log.d("btn4_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study03_ksj.SelectStudyList.this, CursorMain.class);
-//            startActivity(intent);
-//        });
-//        btn5.setOnClickListener(view -> {
-//            Log.d("btn5_btn", "활성");
-//            Intent intent = new Intent(com.jinasoft.study03_ksj.SelectStudyList.this, ThreadMain.class);
-//            startActivity(intent);
-//        });
+        btn4.setOnClickListener(view -> {
+            Log.d("btn4_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, NotificationMain.class);
+            startActivity(intent);
+        });
+        btn5.setOnClickListener(view -> {
+            Log.d("btn5_btn", "활성");
+            Intent intent = new Intent(SelectStudyList.this, AlarmMain.class);
+            startActivity(intent);
+        });
 //        btn6.setOnClickListener(view -> {
 //            Log.d("btn6_btn", "활성");
 //            Intent intent = new Intent(com.jinasoft.study03_ksj.SelectStudyList.this, CountMain.class);

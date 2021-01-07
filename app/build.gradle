@@ -36,7 +36,7 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 // 스퀘어에서 개발한 SPDY HTTP 프로토콜 개선
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
