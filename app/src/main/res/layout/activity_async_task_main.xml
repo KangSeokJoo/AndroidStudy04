@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AsyncTask.AsyncTaskMain">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그를 통해 확인이 가능 웹주소를 입력해주고 \n그 웹에서 다양하게 값을 주고 받을수있음\n네이버로 설정하니 html문이 나왔음\n메니페스트에서 인터넷을 켜야함"
+        android:textSize="20dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AsyncAct_TV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

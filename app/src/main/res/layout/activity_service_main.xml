@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Service.ServiceMain">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnStartService"
+        android:text="서비스 시작"
+        android:id="@+id/btn1"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnStopService"
+        android:text="서비스 중지"
+        android:id="@+id/stbn2"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnStartIntentService"
+        android:id="@+id/btn2"
+        android:text="인텐트 서비스 시작"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/stbn2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnStartForegroundService"
+        android:id="@+id/btn3"
+        android:text="포그라운드 서비스 시작"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="getCountValue"
+        android:text="카운팅 값 출력"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn3"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="쓰레드랑 얼핏 비슷하지만 앱을 사용중에만 액티비티 내 이동중 활성화 되는게 스레드면 서비스는 앱을 내려도 실행된다.
+그 외 포그라운드(알림창 +) 인텐트(스타트커맨더에 전달된 인텐트마다 별도의 스레드 생성 할일이 끝나면 자동으로 stop함)
+바인드는 액티비티 -> 서비스 바인드함 / 클라(디바이스)가 서버에 연결한다"
+    app:layout_constraintVertical_bias="1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
